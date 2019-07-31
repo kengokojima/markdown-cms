@@ -1,0 +1,51 @@
+.p-article-list {
+  @include mq(tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  &__item {
+  }
+}
+
+.p-article-cell {
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, .12);
+  height: 100%;
+  background: $white-color;
+  overflow: hidden;
+}
+
+.c-article-tags {
+  display: flex;
+
+  &__list {
+    text-align: center;
+    margin-top: 2rem;
+    padding-left: 1rem;
+
+    &:first-of-type {
+      margin-left: -1rem;
+    }
+
+    a {
+      border: .5px solid $tag-text;
+      padding: .8rem 1rem;
+      color: $tag-text;
+      font-size: 1.2rem;
+      background: $white-color;
+      transition: all .3s;
+      display: block;
+
+      &:hover {
+        color: $white-color;
+        background: $tag-text;
+      }
+    }
+  }
+}
+
+.c-article-cell__footer {
+  padding: 1rem;
+}
