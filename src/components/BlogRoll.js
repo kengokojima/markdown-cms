@@ -12,7 +12,12 @@ class BlogRoll extends React.Component {
       <ol className="p-article-list">
         {posts &&
           posts.map(({ node: post }) => (
-            <li className="p-article-list__item" key={post.id}>
+            <li
+              className={`p-article-list__item ${
+                post.frontmatter.featuredpost ? 'is-featured' : ''
+              }`}
+              key={post.id}
+            >
               <article className="p-article-cell">
                 <Link to={post.fields.slug} className="p-article-link">
                   {post.frontmatter.featuredimage ? (
@@ -20,7 +25,8 @@ class BlogRoll extends React.Component {
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
                         alt: `featured image thumbnail for post ${post.title}`,
-                        className: 'c-article-cell__image'
+                        className: 'c-article-cell__image',
+                        style: `transition: all .3s`
                       }}
                     />
                   ) : null}

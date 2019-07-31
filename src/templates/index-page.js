@@ -17,14 +17,7 @@ export const IndexPageTemplate = ({
   description,
   intro
 }) => (
-  <div className="l-grid">
-    <header className="l-header">
-      <nav className="p-navbar">
-        <a href="/" className="p-navbar__logo">
-          <img src={logo} alt="Kaldi" style={{ width: '300px' }} />
-        </a>
-      </nav>
-    </header>
+  <div className="">
     <main className="l-container">
       <BlogRoll />
     </main>

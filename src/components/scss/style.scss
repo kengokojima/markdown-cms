@@ -32,6 +32,7 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 @import "./foundation/_variables";
 @import "./foundation/_base";
 @import "./layout/_header";
+@import "./layout/_footer";
 @import "./layout/countainer";
 @import "./layout/grid";
 @import "./object/project/article-list";
