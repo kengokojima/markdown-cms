@@ -16,7 +16,6 @@ export const BlogPostTemplate = ({
   helmet
 }) => {
   const PostContent = contentComponent || Content;
-  const toc = document.getElementsByTagName('h2');
 
   return (
     <section className="l-container--flex">
