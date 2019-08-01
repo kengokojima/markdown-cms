@@ -3,4 +3,34 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  &--flex {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mq(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__main {
+    width: 100%;
+
+    @include mq(tablet) {
+      width: 70%;
+    }
+  }
+
+  &__side {
+    width: 100%;
+
+    @include mq(tablet) {
+      width: 27%;
+    }
+  }
 }

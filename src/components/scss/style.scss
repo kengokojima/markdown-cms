@@ -29,6 +29,7 @@ $mq-static-breakpoint: desktop;
 $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 
 @import "~sass-mq";
+@import "~github-markdown-css";
 @import "./foundation/_variables";
 @import "./foundation/_base";
 @import "./layout/_header";
@@ -36,3 +37,5 @@ $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
 @import "./layout/countainer";
 @import "./layout/grid";
 @import "./object/project/article-list";
+@import "./object/project/latest-post";
+@import "./object/project/_article";

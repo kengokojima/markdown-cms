@@ -1,0 +1,31 @@
+.p-latest-post {
+  &__item {
+    margin-bottom: 1rem;
+  }
+}
+
+.c-latest-post__title {
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 1px solid #eaecef;
+  margin-bottom: 1rem;
+}
+
+.c-latest-post__link {
+  display: flex;
+  transition: all .3s;
+
+  &:hover {
+    opacity: .75;
+  }
+
+  .gatsby-image-wrapper {
+    width: 30%;
+  }
+}
+
+.c-latest-post__article-title {
+  width: calc(70% - 1rem);
+  margin-left: 1rem;
+  font-weight: bold;
+}
