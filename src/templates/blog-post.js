@@ -13,7 +13,8 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet
+  helmet,
+  image
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -24,7 +25,7 @@ export const BlogPostTemplate = ({
         <div className="">
           <div className="">
             <h1 className="c-article-title">{title}</h1>
-            <p>{description}</p>
+            <img src={image} alt="" />
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
@@ -79,6 +80,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        image={post.frontmatter.featuredimage.childImageSharp.fluid.src}
       />
     </Layout>
   );
@@ -102,6 +104,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredimage {
+          childImageSharp {
+            fluid(maxWidth: 2000, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
